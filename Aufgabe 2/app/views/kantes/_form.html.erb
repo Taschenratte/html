@@ -1,0 +1,29 @@
+<%= form_for(@kante) do |f| %>
+  <% if @kante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kante.errors.count, "error") %> prohibited this kante from being saved:</h2>
+
+      <ul>
+      <% @kante.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :knoten1_id %><br />
+    <%= f.text_field :knoten1_id %>
+  </div>
+  <div class="field">
+    <%= f.label :knoten2_id %><br />
+    <%= f.text_field :knoten2_id %>
+  </div>
+  <div class="field">
+    <%= f.label :laenge %><br />
+    <%= f.text_field :laenge %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

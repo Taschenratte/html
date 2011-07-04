@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Knoten1:</b>
+  <%= @kante.knoten1_id %>
+</p>
+
+<p>
+  <b>Knoten2:</b>
+  <%= @kante.knoten2_id %>
+</p>
+
+<p>
+  <b>Laenge:</b>
+  <%= @kante.laenge %>
+</p>
+
+
+<%= link_to 'Edit', edit_kante_path(@kante) %> |
+<%= link_to 'Back', kantes_path %>
